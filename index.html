@@ -3,18 +3,120 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Email Confirmed</title>
+    <title>Vitis Vera - Email Confirmed</title>
     <style>
-      body {
-        font-family: sans-serif;
-        max-width: 600px;
-        margin: 50px auto;
-        text-align: center;
-      }
+        :root {
+            --primary-color: #722F37; /* Wine red color */
+            --text-color: #2C3E50;
+            --background-color: #F9F9F9;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 24px;
+            border-radius: 16px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 28px;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .checkmark {
+            width: 64px;
+            height: 64px;
+            background-color: #4CAF50;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+
+        .checkmark::before {
+            content: '';
+            width: 32px;
+            height: 16px;
+            border: 4px solid white;
+            border-top: none;
+            border-right: none;
+            transform: rotate(-45deg);
+            margin-top: -4px;
+        }
+
+        p {
+            color: var(--text-color);
+            font-size: 18px;
+            margin-bottom: 24px;
+        }
+
+        .return-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        .return-button:hover {
+            background-color: #5E2830;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 24px;
+            }
+
+            .logo {
+                width: 100px;
+                height: 100px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>Confirmation Successful</h1>
-    <p>Your email has been confirmed. You can now return to the app and log in.</p>
+    <div class="container">
+        <img src="https://raw.githubusercontent.com/spshlwrx/VitisVera/main/VitisVera/Assets.xcassets/LinenLogo.imageset/LinenLogo.png" alt="Vitis Vera Logo" class="logo">
+        <div class="checkmark"></div>
+        <h1>Email Confirmed!</h1>
+        <p>Your email has been successfully confirmed. You can now return to Vitis Vera and sign in to your account.</p>
+        <a href="vitisvera://" class="return-button">Return to App</a>
+    </div>
 </body>
 </html>
